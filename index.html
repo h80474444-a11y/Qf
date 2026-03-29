@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dr. Tariq Aziz | Regional Director South Asia (INI)</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --uaf-green: #006747;
+            --ini-blue: #003366;
+            --accent-gold: #D4AF37;
+            --light-bg: #f8f9fa;
+            --text-dark: #2d3436;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; color: var(--text-dark); line-height: 1.6; overflow-x: hidden; }
+
+        /* Header & Logo Section */
+        header {
+            background: white;
+            padding: 20px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logos { display: flex; gap: 30px; align-items: center; }
+        .logos img { height: 60px; transition: transform 0.3s; }
+        .logos img:hover { transform: scale(1.05); }
+
+        nav ul { display: flex; list-style: none; gap: 20px; }
+        nav a { 
+            text-decoration: none; 
+            color: var(--uaf-green); 
+            font-weight: 600; 
+            text-transform: uppercase; 
+            font-size: 0.85rem;
+            transition: 0.3s;
+        }
+        nav a:hover { color: var(--accent-gold); }
+
+        /* Hero Section */
+        .hero {
+            height: 80vh;
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('1000071938.jpg'); /* Cover Photo */
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .hero h1 { font-family: 'Playfair Display', serif; font-size: 3.5rem; margin-bottom: 10px; }
+        .hero p { font-size: 1.2rem; max-width: 800px; font-weight: 300; }
+
+        /* Section Styling */
+        section { padding: 80px 10%; }
+        .section-title { 
+            font-family: 'Playfair Display', serif; 
+            color: var(--uaf-green); 
+            font-size: 2.5rem; 
+            margin-bottom: 40px;
+            border-left: 5px solid var(--accent-gold);
+            padding-left: 20px;
+        }
+
+        /* Intro Grid */
+        .intro-container { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; }
+        .intro-text { font-size: 1.1rem; }
+
+        /* Interactive Article Cards */
+        .article-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
+        .article-card {
+            background: white;
+            padding: 25px;
+            border-radius: 8px;
+            border-bottom: 4px solid var(--uaf-green);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: 0.4s;
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+        .article-card:hover { transform: translateY(-10px); box-shadow: 0 10px 25px rgba(0,0,0,0.1); }
+        .article-card h4 { color: var(--ini-blue); margin-bottom: 10px; }
+
+        /* Scrollable Publication List */
+        .scroll-box {
+            max-height: 500px;
+            overflow-y: scroll;
+            padding: 20px;
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
+        .pub-item { margin-bottom: 15px; padding-bottom: 15px; border-bottom: 1px solid #eee; font-size: 0.95rem; }
+
+        /* Animation Classes */
+        .fade-in { opacity: 0; transform: translateY(20px); transition: 0.8s all ease-out; }
+        .fade-in.appear { opacity: 1; transform: translateY(0); }
+
+        /* Footer/Contacts */
+        .footer { background: var(--uaf-green); color: white; padding: 60px 10%; text-align: center; }
+        .social-links { display: flex; justify-content: center; gap: 30px; font-size: 2rem; margin-top: 20px; }
+        .social-links a { color: white; transition: 0.3s; }
+        .social-links a:hover { color: var(--accent-gold); }
+
+        .btn-cv {
+            display: inline-block;
+            padding: 15px 30px;
+            background: var(--accent-gold);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            margin-top: 20px;
+            transition: 0.3s;
+        }
+        .btn-cv:hover { background: #b8952d; transform: scale(1.05); }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="logos">
+        <img src="uaf_logo.png" alt="UAF Logo"> <img src="ini_logo.png" alt="INI Logo">
+    </div>
+    <nav>
+        <ul>
+            <li><a href="#intro">Introduction</a></li>
+            <li><a href="#articles">Articles</a></li>
+            <li><a href="#publications">Publications</a></li>
+            <li><a href="#supervision">Students</a></li>
+            <li><a href="#conferences">Conferences</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<div class="hero">
+    <h1 class="fade-in">Dr. Tariq Aziz</h1>
+    <p class="fade-in">Advancing Global Sustainable Nitrogen Management & Soil Science</p>
+    <a href="https://www.canva.com/design/DAHEa3Bsuyk/uk4SPmG-jKGt9OZgf7l9YA/edit?utm_content=DAHEa3Bsuyk&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" target="_blank" class="btn-cv">View Full Interactive CV</a>
+</div>
+
+<section id="intro">
+    <h2 class="section-title">Academic & Professional Profile</h2>
+    <div class="intro-container">
+        <div class="intro-text fade-in">
+            <p>Dr. Aziz serves as the Regional Director for South Asia at the International Nitrogen Initiative (INI) and holds the position of Associate Professor of Soil Science at the University of Agriculture, Faisalabad (UAF), Pakistan. He is the lead partner from Pakistan in the global project "South Asia Nitrogen Hub" and is also involved in the UNEP/GEF funded project “International Nitrogen Management Systems (INMS)”.</p>
+            <br>
+            <p>With over 120 research articles and having supervised 5 Ph.D. and 48+ M.Sc. students, his research focuses on fertilizer use efficiency, nutrient recycling, and mitigating nutrient pollution.</p>
+        </div>
+        <div class="stats-grid">
+            <table style="width:100%; border-collapse: collapse;">
+                <tr style="border-bottom: 1px solid #ddd; padding: 10px 0;">
+                    <td><strong>Ph.D. Students</strong></td>
+                    <td style="text-align: right; color: var(--uaf-green); font-weight: 700;">5</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #ddd;">
+                    <td><strong>M.Sc. Students</strong></td>
+                    <td style="text-align: right; color: var(--uaf-green); font-weight: 700;">48+</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #ddd;">
+                    <td><strong>Publications</strong></td>
+                    <td style="text-align: right; color: var(--uaf-green); font-weight: 700;">120+</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</section>
+
+<section id="articles" style="background: var(--light-bg);">
+    <h2 class="section-title">Thought Leadership & Articles</h2>
+    <div class="article-grid">
+        <a href="https://www.thefridaytimes.com/23-Mar-2026/gulf-crisis-already-reaching-south-asia-s-dinner-tables" target="_blank" class="article-card fade-in">
+            <h4>Gulf Crisis reaching South Asia's Dinner Tables</h4>
+            <p>Impact of global conflict on food security and supply chains.</p>
+        </a>
+        <a href="https://www.thefridaytimes.com/26-Nov-2025/pakistan-unea-7-turning-climate-ambition-action-global-leadership" target="_blank" class="article-card fade-in">
+            <h4>UNEA-7: Turning Ambition to Action</h4>
+            <p>Global leadership and Pakistan's role in climate policy.</p>
+        </a>
+        <a href="https://www.thefridaytimes.com/01-Jul-2025/pakistan-leads-global-call-to-tackle-hidden-nitrogen-pollution-crisis-at-unea-7" target="_blank" class="article-card fade-in">
+            <h4>The Hidden Nitrogen Crisis</h4>
+            <p>Leading the global call for nitrogen management.</p>
+        </a>
+        <a href="https://www.thefridaytimes.com/01-May-2025/smarter-fertiliser-use-a-key-to-food-security-climate-action-and-clean-environments" target="_blank" class="article-card fade-in">
+            <h4>Smarter Fertilizer Use</h4>
+            <p>Strategies for food security and environmental protection.</p>
+        </a>
+    </div>
+</section>
+
+<section id="publications">
+    <h2 class="section-title">Research Publications</h2>
+    <div class="scroll-box fade-in">
+        <div class="pub-item"><strong>2025:</strong> Wakeel, A., et al. Managing Fertilizer Rates and Tillage Depth to Improve Nitrogen Use Efficiency. <i>Journal of Soil Science and Plant Nutrition.</i></div>
+        <div class="pub-item"><strong>2024:</strong> Abbas, A., et al. Pakistan Nitrogen Policy Report: Scientific Evidence and Policy Landscape. <i>South Asia Nitrogen Hub.</i></div>
+        <div class="pub-item"><strong>2023:</strong> Möhring, N., Aziz, T. et al. Global targets to reduce nutrient pollution. <i>Nature Ecology & Evolution.</i></div>
+        <div class="pub-item"><strong>2021:</strong> Tariq Aziz et al., (Eds). Nitrogen Assessment; Pakistan as a case study. <i>Elsevier Academic Press.</i></div>
+        </div>
+</section>
+
+<footer id="contact" class="footer">
+    <h2 style="font-family: 'Playfair Display', serif; font-size: 2.5rem; margin-bottom: 20px;">Get In Touch</h2>
+    <p>Institute of Soil & Environmental Sciences, University of Agriculture, Faisalabad</p>
+    <p>Email: <strong>draziz@uaf.edu.pk</strong></p>
+    
+    <div class="social-links">
+        <a href="https://orcid.org/0000-0002-4300-3813" target="_blank"><i class="fab fa-orcid"></i></a>
+        <a href="https://www.linkedin.com/in/tariq-aziz-44b95024/" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="https://initrogen.org/content/tariq-aziz" target="_blank"><i class="fas fa-globe"></i></a>
+    </div>
+    <p style="margin-top: 40px; font-size: 0.8rem; opacity: 0.7;">© 2026 Dr. Tariq Aziz. All Rights Reserved.</p>
+</footer>
+
+<script>
+    // Scroll Reveal Animation
+    const observerOptions = { threshold: 0.1 };
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('appear');
+            }
+        });
+    }, observerOptions);
+
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>
